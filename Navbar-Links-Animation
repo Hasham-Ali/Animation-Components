@@ -1,4 +1,4 @@
-/*----- Navbar Links animation v1 -----*/
+/*----- Navbar Links animation v1 (Border-highlights)-----*/
 
 .menu-main-menu-container ul li a {
     position: relative;
