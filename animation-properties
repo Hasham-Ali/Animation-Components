@@ -1,0 +1,23 @@
+.container{
+  background-color: red;
+}
+.box{
+  width: 400px;
+  height: 400px;
+  animation-name: box-animate;
+  animation-duration: 2s;
+  animation-itration-count: 5;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-timing-funtion: ease-in-out;
+  animation-direction: reverse;
+}
+
+@keyframes box-animation{
+  from {
+    width: 100px;
+  }
+  to {
+    width: 300px;
+  }
+}
