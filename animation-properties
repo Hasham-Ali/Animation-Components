@@ -6,11 +6,15 @@
   height: 400px;
   animation-name: box-animate;
   animation-duration: 2s;
-  animation-itration-count: 5;
+  animation-iteration-count: 5;
   animation-fill-mode: forwards;
   animation-delay: 3s;
-  animation-timing-funtion: ease-in-out;
+  animation-timing-function: ease-in-out;
   animation-direction: reverse;
+}
+
+.box:hover {
+  animation-play-state: paused;
 }
 
 @keyframes box-animation{
