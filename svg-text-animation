@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn svg</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background: black;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        height: 500px;
+        width: 500px;
+        position: relative;
+        background-color: cadetblue;
+        border: 1px solid #000;
+    }
+
+    .svg-text1{
+        stroke-width: 1px;
+        stroke: #fff;
+        fill: transparent;
+        font-size: 44px;
+        font-weight: 400;
+        stroke-linejoin: round;
+        stroke-dasharray: 36;
+        animation: svg-text1 3s linear infinite forwards;
+    }
+
+    @keyframes svg-text1 {
+        100%{
+            stroke-dashoffset: 72;
+        }
+    }
+
+    .svg-text2{
+        stroke-width: 1px;
+        stroke: #fff;
+        fill: transparent;
+        font-size: 44px;
+        font-weight: 400;
+        stroke-linejoin: round;
+        stroke-dasharray: 148;
+        animation: svg-text2 6s infinite forwards ease-in-out;
+    }
+
+    @keyframes svg-text2 {
+        0%{
+            stroke-dashoffset: 0;
+        }
+        50%{
+            stroke-dashoffset: 148;
+        }
+        100%{
+            stroke-dashoffset: 0;
+        }
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+        <svg viewBox="0 0 200 200">
+            <text class="svg-text1" text-anchor="middle" x="50%" y="30%">svg text 1</text>
+            <text class="svg-text2" text-anchor="middle" x="50%" y="60%">svg text 2</text>
+        </svg>
+    </div>
+
+</body>
+
+</html>
