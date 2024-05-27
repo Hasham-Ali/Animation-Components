@@ -11,6 +11,9 @@
   animation-delay: 3s;
   animation-timing-function: ease-in-out;
   animation-direction: reverse;
+
+  /* CSS animation single line Syntax */
+  animation: name duration timing-function delay iteration-count direction fill-mode play-state;
 }
 
 .box:hover {
