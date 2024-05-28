@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button svg</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background: black;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* on hover full border and fill bg-color (animated button) */
+    a.theme-btn1 {
+        background: aliceblue;
+        height: 52px;
+        width: 120px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    a.theme-btn1 span {
+        position: relative;
+        z-index: 99;
+        color: #000;
+    }
+
+    svg.btn1-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+        fill: transparent;
+    }
+
+    rect.btn1-border {
+        stroke-width: 4px;
+        stroke: red;
+        stroke-dasharray: 344;
+        stroke-dashoffset: 344;
+        fill: transparent;
+    }
+
+    a.theme-btn1:hover rect.btn1-border {
+        animation: btn1-ani 1.5s forwards linear;
+    }
+
+    a.theme-btn1:hover span {
+        animation: btn1-span 0.5s 1s forwards;
+    }
+
+    @keyframes btn1-ani {
+        0% {
+            stroke-dashoffset: 344;
+            fill: transparent;
+        }
+
+        80% {
+            stroke-dashoffset: 0;
+            fill: transparent;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+            fill: red;
+        }
+    }
+
+    @keyframes btn1-span {
+        100% {
+            color: #ffffff;
+        }
+    }
+
+
+    /* on hover full border convert to border bottom (animated button) */
+    a.theme-btn2 {
+        height: 52px;
+        width: 120px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 40px;
+    }
+
+    a.theme-btn2 span {
+        position: relative;
+        z-index: 99;
+        color: #ffffff;
+    }
+
+    svg.btn2-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+        fill: transparent;
+    }
+
+    rect.btn2-border {
+        stroke-width: 4;
+        stroke: red;
+        stroke-dasharray: 500, 500;
+        stroke-dashoffset: 0;
+        transition: 2s;
+    }
+
+    a.theme-btn2:hover rect.btn2-border {
+        stroke-dasharray: 100, 400;
+        stroke-dashoffset: 318;
+    }
+
+
+    /* on hover top and bottom border convert to corner border (animated button) */
+    a.theme-btn3 {
+        height: 52px;
+        width: 120px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 40px;
+    }
+
+    a.theme-btn3 span {
+        position: relative;
+        z-index: 99;
+        color: #ffffff;
+    }
+
+    svg.btn3-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+        fill: transparent;
+    }
+
+    rect.btn3-border {
+        stroke-width: 4px;
+        stroke: #fff;
+        stroke-dasharray: 85;
+        stroke-dashoffset: -18;
+        transition: 1s;
+    }
+
+    a.theme-btn3:hover rect.btn3-border {
+        stroke-dasharray: 85;
+        stroke-dashoffset: 38;
+    }
+</style>
+<body>
+
+    <!-- on hover full border and fill bg-color (animated button) -->
+    <a href="#" class="theme-btn1">
+        <span>Button</span>
+        <svg class="btn1-svg">
+            <rect class="btn1-border" x="0" y="0" height="100%" width="100%"></rect>
+        </svg>
+    </a>
+
+    <!-- on hover full border convert to border bottom (animated button) -->
+    <a href="#" class="theme-btn2">
+        <span>Button</span>
+        <svg class="btn2-svg">
+            <rect class="btn2-border" x="0" y="0" height="100%" width="100%"></rect>
+        </svg>
+    </a>
+
+    <!-- on hover top and bottom border convert to corner border (animated button) -->
+    <a href="#" class="theme-btn3">
+        <span>Button</span>
+        <svg class="btn3-svg">
+            <rect class="btn3-border" x="0" y="0" height="100%" width="100%"></rect>
+        </svg>
+    </a>
+
+</body>
+</html>
