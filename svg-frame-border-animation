@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn svg</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background: black;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+  
+    .text-frame {
+        height: 400px;
+        width: 600px;
+        background: #3a3a41;
+        padding: 12px;
+        position: relative;
+        display: flex;
+    }
+
+    .frame-border {
+        fill: transparent;
+    }
+
+    .text-frame p {
+        font-size: 16px;
+        color: #fff;
+        line-height: 2;
+    }
+
+    .frame-text {
+        padding: 50px;
+        border: 1px solid #cec200;
+    }
+
+    .frame-text h2 {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    svg.frame-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .frame-border {
+        stroke: cadetblue;
+        fill: transparent;
+        stroke-width: 4;
+        stroke-dasharray: 558;
+        animation: frame-border-ani 3s ease-in-out infinite;
+        
+    }
+
+    @keyframes frame-border-ani {
+        0%{
+            stroke-dashoffset: 1116;
+        }
+
+        100%{
+            stroke-dashoffset: 0;
+        }
+    }
+
+
+</style>
+
+<body>
+
+    <div class="text-frame">
+        <div class="frame-text">
+            <h2>Border Animation</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+        <svg class="frame-svg">
+            <rect class="frame-border" x="0" y="0" height="100%" width="100%"></rect>
+        </svg>
+    </div>
+
+</body>
+</html>
